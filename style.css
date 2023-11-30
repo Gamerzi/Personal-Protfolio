@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+.box {
+    margin: auto;
+    width: 80%;
+    color: white;
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.box:hover {
+    background-color: rgb(2, 2, 63);
+    font-size: 1.2rem;
+    margin: auto;
+    width: 80%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+ .box img:hover{
+    width: 60%;
+    transition: all 0.3s ease-in-out; 
+ }
+.left {
+    margin: auto;
+    padding: 25px;
+    width: 50%;
+    flex: 1;
+    overflow: hidden;
+}
+
+.left img {
+    width: 50%;
+    margin: auto;
+    height: 50%;
+}
+.right img {
+    padding-left: 8rem;
+    /* padding-right: 0; */
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    height: auto;
+}
+
+.right {
+    padding: 25px;
+    width: 50%;
+    flex: 1;
+    margin: auto;
+    padding: 25px;
+}
+.title{
+    color: white;
+    position: relative;
+    color: white;
+    margin: auto;
+    padding: 0 0 20px 475px;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.title:hover{
+    font-size: 2.25rem;
+    font-weight: bold;
+    color:#0074D9;
+    transition: all 0.3s ease-in-out; 
+}
+
+ #sp:hover{
+    color: rgb(4, 247, 4);
+}
+#red:hover{
+    color: red;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color:#0074D9;
+}

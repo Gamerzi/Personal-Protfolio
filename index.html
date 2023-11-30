@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Martel+Sans:wght@700&family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Poppins:wght@400;600;700&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        ;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    .left {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 23px 0;
+    }
+
+    .first>div {
+        width: 30%;
+    }
+
+    .leftSec {
+        padding-left: 145px;
+        padding-right: 250px;
+        font-size: 2.5rem;
+    }
+
+    .rightSec img {
+        width: 155%;
+        padding-top: 50px;
+        margin-right: 30px;
+        position: relative;
+        right: 50%;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        cursor: pointer;
+        font-weight: bold;
+        color: rgb(118, 118, 230)
+    }
+
+    #element {
+        color: rgb(118, 118, 230)
+    }
+
+    .second-sec {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+    }
+
+    .second-sec h1 {
+        font-size: 3.6rem;
+    }
+
+    .gray {
+        color: grey;
+        font-size: 1.6rem;
+    }
+
+    .second-sec .box {
+        background-color: white;
+        width: 80vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+    }
+
+    .second-sec .vertical {
+        height: 93px;
+        width: 1px;
+        background-color: white;
+        margin: 0 140px;
+    }
+
+    .image-top {
+        width: 52px;
+        position: relative;
+        top: -48px;
+        height: 52px;
+    }
+
+    .vertical-title {
+        top: 45px;
+        position: relative;
+        width: 8rem;
+        height: 0.5rem;
+        font-weight: bold;
+    }
+
+    .vertical-desc {
+        margin-top: 102px;
+        width: 155px;
+        color: gray;
+    }
+
+    #w2 {
+        padding-top: 5px;
+        margin: 0 0.5rem 0 0;
+    }
+
+    #v2 {
+        margin-top: 4rem;
+    }
+
+    .work {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.9rem;
+    }
+
+    .work>div {
+        width: 30%;
+    }
+
+    .work .leftwork {
+
+        padding-left: 145px;
+        padding-right: 250px;
+    }
+
+    .rightwork img {
+        width: 155%;
+        padding-top: 50px;
+        margin-right: 30px;
+        position: relative;
+        right: 50%;
+    }
+
+    #ser {
+        font-size: 2.5rem;
+    }
+
+    #ser:hover {
+        transition: all 0.3s ease-in-out;
+        font-size: 3rem;
+        color: rgb(118, 118, 230)
+    }
+
+    #hover:hover {
+        transition: all 0.3s ease-in-out;
+        font-size: larger;
+        color: rgb(118, 118, 230)
+    }
+
+    .name:hover {
+        transition: all 0.3s ease-in-out;
+        font-size: larger;
+        font-weight: bold;
+        color: rgb(118, 118, 230)
+    }
+
+    .action-buttons a {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        background-color: #054278;
+        /* Button color */
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+        /* Add a smooth transition effect */
+        border-radius: 2rem;
+    }
+
+    .action-buttons a:hover {
+        transform: scale(1.1);
+        background-color: #0074D9;
+        /* Scale the button up slightly */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        /* Add a shadow effect */
+        size: 35px;
+    }
+
+    .appear {
+        display: none;
+    }
+
+
+    @media (max-width: 435px) {
+        .leftSec {
+            padding-left: 155px;
+            font-size: 1.05rem;
+        }
+
+        .action-buttons {
+            display: flex;
+        }
+
+        .action-buttons a {
+            font-size: 6px;
+        }
+
+        .rightSec {
+            display: flex;
+            position: relative;
+            right: 50%;
+        }
+
+        .rightSec img {
+            width: 200px;
+            margin-right: 30px;
+            position: relative;
+            right: 0;
+            left: 25px;
+        }
+
+        .second-sec h1 {
+            font-size: 2rem;
+        }
+
+        .gray {
+            color: grey;
+            font-size: 1.25rem;
+        }
+
+        #del {
+            display: none;
+        }
+
+        .appear {
+            display: block;
+        }
+
+        .image-top {
+            width: 52px;
+            margin: 20px;
+            position: relative;
+            top: 40px;
+            height: 52px;
+        }
+
+        .appear li {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+        }
+
+        .left {
+            margin-left: 25px;
+            left: 2px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav ul li {
+            font-size: smaller;
+            list-style: none;
+            margin: 0 12px;
+        }
+
+        .second-sec h1 {
+            font-size: 1.75rem;
+            padding: 25px;
+        }
+
+        #ser {
+            left: 50px;
+            padding-top: 20px;
+            font-size: 1.25rem;
+            position: absolute;
+            width: auto;
+        }
+
+        .work {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        #mall {
+            width: 380px;
+            font-size: 1.2rem;
+        }
+
+        .rightwork img {
+            width: 450px;
+            padding-top: 50px;
+            margin-right: 30px;
+            position: relative;
+            right: 50%;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"> Web Developer</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="#">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="first">
+                <div class="leftSec">
+                    Hi my name is <span class="name">Baqer Ali</span>
+                    <div>I am a professional</div>
+                    <div class="name"> Web Developer</div>
+                    <span id="element"></span>
+                    <div class="action-buttons">
+                        <a href="https://github.com/Gamerzi">GitHub</a>
+                        <a href>Contact Me</a>
+                    </div>
+                </div>
+                <div class="rightSec">
+                    <img src="b.jpg" alt="My image">
+                </div>
+            </div>
+        </section>
+        <br> <br>
+        <br>
+        <section class="second-sec">
+            <span class="gray">My development journey</span>
+            <h1>Learning Experience</h1>
+            <div class="appear">
+                <ul>
+                    <li> <img class="image-top" src="html.png" alt=""> Learned HTML in a week</li>
+                    <li> <img class="image-top" src="css.png" alt=""> CSS Master</li>
+                    <li> <img class="image-top" src="node.jpg" alt="">Node.JS developer</li>
+                    <li> <img class="image-top" src="JS.png" alt="">Java Developer</li>
+                    <li> <img class="image-top" src="mongo.png" alt="">Express and Mongoose</li>
+                </ul>
+            </div>
+            <div class="box" id="del">
+                <div class="vertical">
+                    <img class="image-top" src="html.png" alt="" id="del">
+                    <div class="vertical-title" id="del">
+                        Learned HTML in a week
+                    </div>
+                    <div class="vertical-desc" id="del">
+                        In just one week, I swiftly learned HTML, mastering the basics and building a simple webpage.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="css.png" alt="" id="del">
+                    <div class="vertical-title" id="w2" id="del">
+                        CSS Master
+                    </div>
+                    <div class="vertical-desc" id="v2" id="del">
+                        Professional website I have learned design and colour physcology which can transform your
+                        website
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="node.jpg" alt="" id="del">
+                    <div class="vertical-title" id="w2" id="del">
+                        Node.JS developer
+                    </div>
+                    <br> <br>
+                    <div class="vertical-desc" id="v2" id="del">
+                        I can deal with node js and back end side code and APIs
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="JS.png" alt="" id="del">
+                    <div class="vertical-title" id="w2" id="del">Java Developer</div>
+                    <br>
+                    <div class="vertical-desc" id="v2" id="del">Js can used for making beautiful logic in the program i
+                        am highly
+                        skilled with the technology</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="mongo.png" alt="" id="del">
+                    <div class="vertical-title" id="w2" id="del">Express and Mongoose</div>
+                    <br>
+                    <div class="vertical-desc" id="v2" id="del">I can use express to create a web app and we are capable
+                        of using
+                        mongoose in the data base to make a full functional website</div>
+                </div>
+            </div>
+        </section>
+        <section class="second-sec">
+            <span class="gray">Value which we can provide to our clients</span>
+            <h1>Services we provide</h1>
+            <section>
+                <div class="work">
+                    <div class="lefwork">
+                        <b id="ser">One day website dilivery</b>
+                        <br> <br>
+                        <div id="mall">We can provide fast delivery of landing pages.The website will be fast easy to
+                            use and
+                            highly responsive</div>
+                    </div>
+                    <div class="rightwork">
+                        <img src="developer.jpg" alt="My image">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <br> <br> <br>
+        <section class="second-sec">
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <section>
+                <div class="work">
+                    <div class="lefwork">
+                        <b id="ser"> <span id="hover">Website redesign</span></b>
+                        <br> <br>
+                        <div id="mall">We can make your website brand new and we can make it unrecognisable. New
+                            websites and new
+                            opportunities awaits you</div>
+                    </div>
+                    <div class="rightwork">
+                        <img src="design.jpg" alt="My image">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="second-sec">
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <section>
+                <div class="work">
+                    <div class="lefwork">
+                        <b id="ser"> <span id="hover">Full Stack Web Development</span></b>
+                        <br> <br>
+                        <div id="mall">We will provide you with a full functional website with frontend backend and
+                            along with DBs
+                        </div>
+                    </div>
+                    <div class="rightwork">
+                        <img src="full.jpg" alt="My image">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section class="second-sec">
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                <section>
+                    <div class="work">
+                        <div class="lefwork">
+                            <b id="ser"> <span id="hover">Small Bussiness</span></b>
+                            <br> <br>
+                            <div class="content" id="mall">For any small Bussiness we will provide a special care as we
+                                belive in win and
+                                win. We will
+                                provide you with an impressive website which will attract the customers and improve as a
+                                brand
+                                on social media at an offerdable price</div>
+                        </div>
+                        <div class="rightwork">
+                            <img src="local.jpg" alt="My image">
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        </section>
+        <section class="second-sec">
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <section>
+                <div class="work">
+                    <div class="lefwork">
+                        <b id="ser"> <span id="hover">Integration with AI</span></b>
+                        <br> <br>
+                        <div class="content" id="mall">As many of you know AI is the future and it is inevitable and we
+                            will
+                            help you
+                            integrating your
+                            websites with AI technologies. You website with the help of AI will become more efficient
+                            and
+                            more resposive
+                        </div>
+                    </div>
+                    <div class="rightwork">
+                        <img src="robo.jpg" alt="My image">
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Craeting Websites', 'Developing', 'Web Developer', 'Web Designer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+</body>
+
+</html>
